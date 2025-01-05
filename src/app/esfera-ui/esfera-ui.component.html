@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Calculadora de Volumen de Esfera</h2>
+  
+    <form (ngSubmit)="calcularVolumen()">
+      <div>
+        <label for="radio">Radio (r):</label>
+        <input id="radio" [(ngModel)]="radio" name="radio" type="number" required>
+      </div>
+  
+      <div>
+        <label for="altura">Altura (h):</label>
+        <input id="altura" [(ngModel)]="altura" name="altura" type="number" required>
+      </div>
+  
+      <button type="submit">Calcular Volumen</button>
+    </form>
+  
+    <div *ngIf="volumen !== null">
+      <p>Volumen de la esfera: {{ volumen }} unidades cúbicas</p>
+    </div>
+  
+    <div *ngIf="errorMessage" class="error">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  

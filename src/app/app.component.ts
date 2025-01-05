@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { EsferaUiComponent } from './esfera-ui/esfera-ui.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [EsferaUiComponent],  // Importa el componente standalone
+  template: `<app-esfera-ui></app-esfera-ui>`,  // Usa el componente aquí
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prueba_examen';
+  title = 'Calculadora de Volumen';
 }
